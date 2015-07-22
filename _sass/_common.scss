@@ -1,0 +1,49 @@
+body {
+    color: $color-text;
+    background-color: $color-background;
+}
+
+a {
+    color: $color-main;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-title;
+    }
+}
+
+blockquote {
+    background-color: darken($color-background, 4%);
+    color: $color-title;
+    border-left: 7px solid $color-main;
+    margin-left: 0;
+    margin-right: 0;
+    padding: rhythm(1/2);
+
+    @include susy-media($breakpoint) {
+        padding: rhythm(1);
+    }
+
+    cite {
+        display: block;
+        @include adjust-font-size-to(14px);
+        color: lighten($color-title, 15%);
+        font-style: normal;
+    }
+}
+
+pre > code {
+    @include adjust-font-size-to(14px);
+    font-family: $code-font-family;
+}
+
+.container {
+    @include container(840px);
+    box-sizing: border-box;
+
+    padding: 0 rhythm(1/2);
+
+    @include susy-media($breakpoint) {
+        padding: 0 rhythm(1);
+    }
+}

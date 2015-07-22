@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ page.meta_title }}</title>
+        <meta name="description" content="{{ page.meta_description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Sans+Pro:400,700/Source+Code+Pro">
+
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="/" title="home">HOME</a>
+                    <a href="/history" title="history">HISTORY</a>
+                </nav>
+
+                <address>
+                    <a class="svg" href="http://twitter.com/keevitaja" title="twitter">{% include twitter.svg.html %}</a>
+                    <a class="svg" href="http://github.com/keevitaja" title="github">{% include github.svg.html %}</a>
+                </address>
+            </div>
+        </header>
+        
+        <main>
+            <div class="container">
+                {{ content }}
+            </div>
+        </main>
+
+        <script src="/js/highlight.pack.js"></script>
+        <script src="/js/app.js"></script>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-56314956-1','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

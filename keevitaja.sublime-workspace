@@ -1,0 +1,819 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"block",
+				"blockquote	Tag"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"modal",
+				"modalView"
+			],
+			[
+				"Ül",
+				"Ülesanne	(task.blade.php)"
+			],
+			[
+				"comme",
+				"commentable_id"
+			],
+			[
+				"commen",
+				"commentable_id"
+			],
+			[
+				"regist",
+				"registerSorterFacade"
+			],
+			[
+				"Sorter",
+				"SorterHelperFacade	(SorterHelperFacade.php)"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"cr",
+				"csrfToken	(app.blade.php)"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"acco",
+				"account"
+			],
+			[
+				"creat",
+				"created_at"
+			],
+			[
+				"upd",
+				"updated_at	(index.blade.php)"
+			],
+			[
+				"acc",
+				"accounts"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"delete",
+				"deleteByNameAndLoggedUser	(SorterRepository.php)"
+			],
+			[
+				"exis",
+				"existsForLoggedUser	(SorterRepository.php)"
+			],
+			[
+				"Repo",
+				"Repository	(AccountRepository.php)"
+			],
+			[
+				"updat",
+				"updated_at"
+			],
+			[
+				"accou",
+				"accounts"
+			],
+			[
+				"created",
+				"created_at	(index.blade.php)"
+			],
+			[
+				"or",
+				"orderBy"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"dele",
+				"deleteById	(AccountRepository.php)"
+			],
+			[
+				"count",
+				"countyId"
+			],
+			[
+				"Create",
+				"CreateAccountRequest	(CreateAccountRequest.php)"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"tar",
+				"target"
+			],
+			[
+				"are",
+				"areaUidPartial"
+			],
+			[
+				"a",
+				"areaUid"
+			],
+			[
+				"ta",
+				"target"
+			],
+			[
+				"target",
+				"targetMob"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"con",
+				"confirmed"
+			],
+			[
+				"emai",
+				"emailTest"
+			],
+			[
+				"bow",
+				"bower_components/"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"bal",
+				"baltexim.sublime-project"
+			],
+			[
+				"wid",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "config.rb",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1564,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_sass/_common.scss",
+			"settings":
+			{
+				"buffer_size": 885,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/default.html",
+			"settings":
+			{
+				"buffer_size": 1787,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/2014-11-02-selective-abstraction.md",
+			"settings":
+			{
+				"buffer_size": 3024,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 121.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Snippet: cons",
+				"Snippet: constructor"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/mnt/data/www/keevitaja.com",
+		"/mnt/data/www/keevitaja.com/_includes",
+		"/mnt/data/www/keevitaja.com/_js",
+		"/mnt/data/www/keevitaja.com/_layouts",
+		"/mnt/data/www/keevitaja.com/_posts",
+		"/mnt/data/www/keevitaja.com/_sass",
+		"/mnt/data/www/keevitaja.com/public"
+	],
+	"file_history":
+	[
+		"/mnt/data/www/keevitaja.com/_sass/_common.scss",
+		"/mnt/data/www/keevitaja.github.io/jekyll/_config.yml",
+		"/mnt/data/www/keevitaja.com/_layouts/post.html",
+		"/mnt/data/www/keevitaja.com/_layouts/default.html",
+		"/mnt/data/www/keevitaja.com/_sass/_main.scss",
+		"/mnt/data/www/keevitaja.com/_includes/disqus.html",
+		"/mnt/data/www/keevitaja.com/_posts/2014-11-04-http-responses-laravel-command-patter.md",
+		"/mnt/data/www/keevitaja.github.io/jekyll/_includes/disqus.html",
+		"/mnt/data/www/keevitaja.com/_layouts/page.html",
+		"/mnt/data/www/keevitaja.com/public/index.html",
+		"/mnt/data/www/keevitaja.com/index.html",
+		"/mnt/data/www/keevitaja.com/public/2014/11/http-responses-laravel-command-patter/index.html",
+		"/mnt/data/www/keevitaja.com/_posts/2014-11-03-auto-initialize-constructor-parameters.md",
+		"/mnt/data/www/keevitaja.com/_posts/2014-11-02-selective-abstraction.md",
+		"/mnt/data/www/keevitaja.com/_posts/2015-07-21-This-is-a-Test.md",
+		"/mnt/data/www/keevitaja.com/_includes/post_header.html",
+		"/mnt/data/www/keevitaja.github.io/jekyll/_layouts/post.html",
+		"/mnt/data/www/keevitaja.com/_js/app.js",
+		"/mnt/data/www/keevitaja.com/_sass/_header.scss",
+		"/mnt/data/www/keevitaja.com/_sass/app.scss",
+		"/mnt/data/www/keevitaja.com/gulpfile.js",
+		"/mnt/data/www/keevitaja.github.io/jekyll/_layouts/default.html",
+		"/mnt/data/www/keevitaja.github.io/jekyll/index.html",
+		"/mnt/data/www/keevitaja.com/_config.yml",
+		"/mnt/data/www/keevitaja.com/_layouts/tmp.html",
+		"/mnt/data/www/keevitaja.com/js/jquery.min.map",
+		"/mnt/data/www/keevitaja.com/bower.json",
+		"/mnt/data/www/keevitaja.com/_includes/twitter.svg.html",
+		"/mnt/data/www/keevitaja.com/_includes/github.svg.html",
+		"/mnt/data/www/blog.old/js/app.js",
+		"/mnt/data/www/blog/design/src/js/app.js",
+		"/mnt/data/www/blog.old.old/js/app.js",
+		"/mnt/data/www/keevitaja.github.io/jekyll/js/app.js",
+		"/home/user/Downloads/icomoon_2_icons/SVG/twitter.svg",
+		"/mnt/data/www/crm.keevitaja.com/composer.json",
+		"/mnt/data/www/crm.keevitaja.com/database/migrations/2015_07_06_105206_create_comments_table.php",
+		"/mnt/data/www/crm.keevitaja.com/app/Account.php",
+		"/mnt/data/www/crm.keevitaja.com/app/Comment.php",
+		"/mnt/data/www/crm.keevitaja.com/resources/views/layouts/app.blade.php",
+		"/mnt/data/www/crm.keevitaja.com/database/seeds/AccountTableSeeder.php",
+		"/mnt/data/www/crm.keevitaja.com/database/seeds/DatabaseSeeder.php",
+		"/mnt/data/www/crm.keevitaja.com/database/seeds/CountyTableSeeder.php",
+		"/mnt/data/www/crm.keevitaja.com/database/migrations/2015_06_16_072548_create_counties_table.php",
+		"/mnt/data/www/crm.keevitaja.com/database/factories/ModelFactory.php",
+		"/mnt/data/www/crm.keevitaja.com/database/migrations/2015_06_16_072058_create_accounts_table.php",
+		"/mnt/data/www/crm/database/migrations/2015_06_25_074651_create_countries_table.php",
+		"/mnt/data/www/crm/.env",
+		"/mnt/data/www/crm/resources/views/accounts/show.blade.php",
+		"/mnt/data/www/crm/resources/views/accounts/modals/tasks/edit.blade.php",
+		"/mnt/data/www/crm/public/js/app.js",
+		"/mnt/data/www/crm/app/Http/Controllers/DashController.php",
+		"/mnt/data/www/crm/app/Http/routes.php",
+		"/mnt/data/www/crm/app/Repositories/TaskRepository.php",
+		"/mnt/data/www/crm/app/Repositories/AccountRepository.php",
+		"/mnt/data/www/crm/app/Http/Controllers/TasksController.php",
+		"/mnt/data/www/crm/resources/views/accounts/modals/tasks/create.blade.php",
+		"/mnt/data/www/crm/app/Http/Controllers/CommentsController.php",
+		"/mnt/data/www/crm/app/Task.php",
+		"/mnt/data/www/crm/resources/views/accounts/modals/comments/edit.blade.php",
+		"/mnt/data/www/crm/app/Repositories/Repository.php",
+		"/mnt/data/www/crm/database/migrations/2015_07_07_081027_create_tasks_table.php",
+		"/mnt/data/www/crm/app/Repositories/CommentRepository.php",
+		"/mnt/data/www/crm/resources/views/accounts/modals/comments/create.blade.php",
+		"/mnt/data/www/crm/resources/views/accounts/edit.blade.php",
+		"/mnt/data/www/crm/resources/views/accounts/modals/task.blade.php",
+		"/mnt/data/www/crm/resources/views/accounts/modals/comment.blade.php",
+		"/mnt/data/www/crm/resources/views/partials/errors.blade.php",
+		"/mnt/data/www/crm/resources/views/partials/modal/header.blade.php",
+		"/mnt/data/www/crm/resources/views/partials/modal/footer.blade.php",
+		"/mnt/data/www/crm/resources/views/layouts/modals/app.blade.php",
+		"/mnt/data/www/crm/resources/views/layouts/modals/task.blade.php",
+		"/mnt/data/www/crm/resources/views/layouts/modals/comment.blade.php",
+		"/home/user/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/mnt/data/www/crm/app/Services/EloquentSorter/Sorter.php",
+		"/mnt/data/www/crm/resources/views/layouts/app.blade.php",
+		"/mnt/data/www/crm/app/Account.php",
+		"/mnt/data/www/crm/app/Comment.php",
+		"/mnt/data/www/crm/app/Addons/PrettyTimestampsTrait.php",
+		"/mnt/data/www/crm/app/Http/Requests/CreateTaskRequest.php",
+		"/mnt/data/www/crm/app/Http/Requests/CreateCommentRequest.php",
+		"/mnt/data/www/crm/app/Http/Controllers/AccountsController.php",
+		"/mnt/data/www/crm/database/migrations/2015_07_06_105206_create_comments_table.php",
+		"/mnt/data/www/crm/resources/views/accounts/create.blade.php",
+		"/mnt/data/www/crm/package.json",
+		"/mnt/data/www/crm/resources/views/accounts/index.blade.php",
+		"/mnt/data/www/crm/app/Services/EloquentSorter/SorterHelper.php",
+		"/mnt/data/www/crm/app/Http/Requests/CreateAccountRequest.php",
+		"/mnt/data/www/crm/app/Services/EloquentSorter/SorterHelperFacade.php",
+		"/mnt/data/www/crm/app/Repositories/SorterRepository.php",
+		"/mnt/data/www/crm/resources/assets/sass/app.scss",
+		"/mnt/data/www/crm/database/migrations/2015_06_27_110313_create_sorters_table.php",
+		"/mnt/data/www/crm/config/app.php",
+		"/mnt/data/www/crm/app/Providers/AppServiceProvider.php",
+		"/home/user/.config/sublime-text-3/Packages/PHP Companion/PHP Companion.sublime-settings",
+		"/home/user/.config/sublime-text-3/Packages/User/PHP Companion.sublime-settings",
+		"/mnt/data/www/crm/crm.sublime-project",
+		"/mnt/data/www/crm/app/Http/Controllers/AuthController.php",
+		"/mnt/data/www/crm/app/Http/Controllers/Auth/AuthController.php",
+		"/mnt/data/www/crm/database/migrations/2015_06_16_072058_create_accounts_table.php",
+		"/mnt/data/www/crm/database/migrations/2015_06_16_072548_create_counties_table.php",
+		"/mnt/data/www/crm/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/mnt/data/www/crm/public/js",
+		"/mnt/data/www/crm/app/Services/EloquentSorter/UrlGenerator.php",
+		"/mnt/data/www/crm/database/seeds/DatabaseSeeder.php",
+		"/mnt/data/www/crm/database/seeds/CountyTableSeeder.php",
+		"/mnt/data/www/crm/database/seeds/AccountTableSeeder.php",
+		"/mnt/data/www/crm/database/seeds/UserTableSeeder.php",
+		"/mnt/data/www/crm/database/seeds/AccountsTableSeeder.php",
+		"/mnt/data/www/crm/app/Services/EloquentSorter/SortableTrait.php",
+		"/mnt/data/www/crm/app/Http/Controllers/SortController.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/mnt/data/www/crm/app/Sorter.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Auth/Guard.php",
+		"/mnt/data/www/crm/app/Http/Middleware/Authenticate.php",
+		"/mnt/data/www/crm/resources/views/auth/create.blade.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
+		"/mnt/data/www/crm/resources/views/auth/login.blade.php",
+		"/mnt/data/www/crm/app/Services/EloquentSorter/UrlGeneratorFacade.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Routing/Redirector.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Routing/Route.php",
+		"/mnt/data/www/crm/vendor/symfony/http-foundation/Request.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Http/Request.php",
+		"/mnt/data/www/crm/app/County.php",
+		"/mnt/data/www/crm/vendor/laravel/framework/src/Illuminate/Support/Collection.php",
+		"/mnt/data/www/crm/app/Repositories/CountyRepository.php"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"the ",
+			"post",
+			"category",
+			"div",
+			"body",
+			"comment",
+			"data",
+			"accounts",
+			"p",
+			"{{ $id }}",
+			"modalId",
+			"@yield('modal-id')",
+			"commentable",
+			"addComment",
+			"myModal",
+			"comments",
+			"commentable",
+			"'",
+			"<span class=\"caret\"></span>",
+			"-",
+			"$this->auth",
+			"current",
+			"{{",
+			"ById",
+			"sm",
+			"* ",
+			"true",
+			"desc",
+			"'));\n",
+			"accounts",
+			"\"",
+			"src/",
+			"Where",
+			"\"]",
+			"[\"",
+			"hasRoom",
+			"HasCurrentRoom",
+			"Services",
+			"AreasRepo",
+			"Trigger",
+			"Controller",
+			"Areas:",
+			"false",
+			"font-weight: 600;",
+			"5",
+			"span",
+			"name",
+			"$('.form.contact .email')",
+			"grayer",
+			"input",
+			"span",
+			"Vaata lisaks",
+			"d",
+			"7",
+			"5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"resources/assets/",
+			"font-weight: 500;"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "config.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								696,
+								696
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_sass/_common.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_layouts/default.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1717,
+								1717
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1044.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_posts/2014-11-02-selective-abstraction.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								765,
+								765
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "keevitaja.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"show",
+				"resources/views/accounts/show.blade.php"
+			],
+			[
+				"redirect",
+				"vendor/laravel/framework/src/Illuminate/Routing/Redirector.php"
+			],
+			[
+				"appbla",
+				"resources/views/layouts/app.blade.php"
+			],
+			[
+				"app.",
+				"config/app.php"
+			],
+			[
+				"appser",
+				"app/Providers/AppServiceProvider.php"
+			],
+			[
+				"sql",
+				"lua/SQLiteDB.lua"
+			],
+			[
+				"pl",
+				"snd/plugin.lua"
+			],
+			[
+				"",
+				"snd/Services/OnPluginInstall.lua"
+			],
+			[
+				"area",
+				"snd/Repositories/Areas.lua"
+			],
+			[
+				"onpl",
+				"snd/Services/OnPluginInstall.lua"
+			],
+			[
+				"sndpl",
+				"snd/plugin.lua"
+			],
+			[
+				"are",
+				"snd/Repositories/Areas.lua"
+			],
+			[
+				"data",
+				"design/data.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/mnt/data/www/crm.keevitaja.com/crm.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 356.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

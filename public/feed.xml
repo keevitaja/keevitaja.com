@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description></description>
+    <link>http://keevitaja.com/</link>
+    <atom:link href="http://keevitaja.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 22 Jul 2015 15:49:21 +0300</pubDate>
+    <lastBuildDate>Wed, 22 Jul 2015 15:49:21 +0300</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>How to handle HTTP responses in Laravel using Command Pattern</title>
+        <description>&lt;p&gt;There are many ways to handle the HTTP responses. It all comes down to a personal preference. One cool way to go is a solution where we use a class constant as the status from the Command Bus. Then we select the correct response using the status and return it.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;There are many ways to handle the &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_HTTP_status_codes&quot;&gt;HTTP responses&lt;/a&gt;. It all comes down to a personal preference. One cool way to go is a solution where we use a &lt;a href=&quot;http://php.net/manual/en/language.oop5.constants.php&quot;&gt;class constant&lt;/a&gt; as the status from the &lt;a href=&quot;https://laracasts.com/series/commands-and-domain-events/episodes/2&quot;&gt;Command Bus&lt;/a&gt;. Then we select the correct response using the status and return it.&lt;/p&gt;
+
+&lt;p&gt;The benefit of taking this approach is highly readable code which gives us more flexibility than just using a boolean or a string.&lt;/p&gt;
+
+&lt;blockquote&gt;
+    The following solution can also be used without the Command Pattern. For the example a Service may return this type of status!
+&lt;/blockquote&gt;
+
+&lt;p&gt;The goal is to store the status as a constant inside a dedicated class. Class constant is not required to have a value, but it makes sense to assign &lt;a href=&quot;http://laravel.com/docs/master/localization&quot;&gt;i18n&lt;/a&gt; slug to it. We will see the huge benefit in the Controller class!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class DrinkBeerCommandStatus {
+
+    const BOTTLE_EMPTY = &#39;responses.bottle.empty&#39;;
+    const SUBJECT_DRUNK = &#39;responses.subject.drunk&#39;;
+    const SNACKS_MISSING = &#39;responses.snacks.missing&#39;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the Command Handler we do our tasks, fire events and finally return the appropriate status.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class DrinkBeerCommandHandler {
+
+    public function handle($command)
+    {
+        try
+        {
+            $this-&amp;gt;drink($command-&amp;gt;subject);
+        }
+        catch (BottleException $e)
+        {
+            return DrinkBeerCommandStatus::BOTTLE_EMPTY;
+        }
+        catch (FoodException $e)
+        {
+            return DrinkBeerCommandStatus::SNACKS_MISSING;
+        }
+        
+        return DrinkBeerCommandStatus::SUBJECT_DRUNK;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In each case we get the correct status from the handler executed by the Command Bus. Again there are many ways how to proceed, but using the status inside a switch statement gives us the maximum amount of benefit we can get!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class DrinkingController {
+
+    public function drink()
+    {
+        $status = $this-&amp;gt;commandBus-&amp;gt;execute($command);
+
+        switch ($status)
+        {
+            case DrinkBeerCommandStatus::BOTTLE_EMPTY:
+            case DrinkBeerCommandStatus::SNACKS_MISSING:
+                return redirect(&#39;seek&#39;)-&amp;gt;withMessage(trans($status));
+            case DrinkBeerCommandStatus::SUBJECT_DRUN:
+                return redirect(&#39;sleep&#39;);
+
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using a class constant as the status with a i18n slug assigned to it, gives us huge flexibility with highly readable code. There are no comments needed! If the bottle was empty or there were no snacks, we need to seek for new resources. If we drank lot of beer it is time to sleep!&lt;/p&gt;
+
+&lt;p&gt;The pseudo code above uses Laravel 5 helpers.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Nov 2014 02:00:00 +0200</pubDate>
+        <link>http://keevitaja.com/2014/11/http-responses-laravel-command-pattern/</link>
+        <guid isPermaLink="true">http://keevitaja.com/2014/11/http-responses-laravel-command-pattern/</guid>
+        
+        <category>Code</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to auto-initialize constructor parameters in Sublime Text 3</title>
+        <description>&lt;p&gt;Have you ever wondered, if it is possible to auto-initialize the constructor parameters in Sublime Text as it can be done with PhpStorm? Wonder no more, because i have a perfect solution in the form of a macro and key binding.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Have you ever wondered, if it is possible to auto-initialize the constructor parameters in &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; as it can be done with &lt;a href=&quot;https://www.jetbrains.com/phpstorm/&quot;&gt;PhpStorm&lt;/a&gt;? Wonder no more, because i have a perfect solution in the form of a macro and keymap.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/keevitaja/94ec7edcb1322d3a44bb&quot;&gt;Download the initialization macro&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Place the macro under the Sublime User folder. In &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; the correct path is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/.config/sublime-text-3/Packages/User
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you do not know the right path, click &lt;em&gt;Perferences &amp;gt; Browse packages&lt;/em&gt; in sublime menu and packages folder should open.&lt;/p&gt;
+
+&lt;p&gt;Store the key binding in the default user keymap file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{ 
+    &quot;keys&quot;: [&quot;ctrl+i&quot;], 
+    &quot;command&quot;: &quot;run_macro_file&quot;, 
+    &quot;args&quot;: {&quot;file&quot;: &quot;res://Packages/User/initialize_properties.sublime-macro&quot;} 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Place your cursor on the parameter inside the constructor and press ctrl+i. If everything is set correctly, you should see the same result as in the example below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// before
+public function __construct($property)
+{
+}
+
+// after ctrl+i
+protected $property;
+
+public function __construct($property)
+{
+	$this-&amp;gt;property = $property;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You have to initialize each field as macro cannot do them all in one swing.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-did-i-come-up-with-this&quot;&gt;How did i come up with this?&lt;/h3&gt;
+
+&lt;p&gt;With trial and error. Lot of help came from the default keymap file. Also i googled for some example macros and took it from there. Sublime has this &lt;a href=&quot;http://sublimetext.info/docs/en/extensibility/macros.html&quot;&gt;&lt;em&gt;record macro&lt;/em&gt;&lt;/a&gt; feature, but it does not work. In my case it recorded something totally different from what i was doing.&lt;/p&gt;
+
+&lt;p&gt;I hope this is helping you in your quest to be a faster coder. If you have comments or addition information feel free to leave them below!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 03 Nov 2014 02:00:00 +0200</pubDate>
+        <link>http://keevitaja.com/2014/11/auto-initialize-constructor-parameters/</link>
+        <guid isPermaLink="true">http://keevitaja.com/2014/11/auto-initialize-constructor-parameters/</guid>
+        
+        <category>Tech</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Selective abstraction does not make sense</title>
+        <description>&lt;p&gt;In Laravel community lot of people use Repository pattern by Taylor Otwell and at the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;In Laravel community lot of people use &lt;a href=&quot;http://ryantablada.com/post/the-repository-pattern-in-action&quot;&gt;Repository pattern&lt;/a&gt; by &lt;a href=&quot;http://taylorotwell.com/&quot;&gt;Taylor Otwell&lt;/a&gt;. At the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!&lt;/p&gt;
+
+&lt;h3 id=&quot;the-origin-of-repository-pattern-in-laravel&quot;&gt;The origin of Repository pattern in Laravel.&lt;/h3&gt;
+
+&lt;p&gt;Of course Taylor did not come up with the pattern itself. In his book “&lt;a href=&quot;https://leanpub.com/laravel&quot;&gt;From Apprentice To Artisan&lt;/a&gt;” he talked about it and many people figured it is the right way to do things in &lt;a href=&quot;http://laravel.com/&quot;&gt;Laravel&lt;/a&gt;. Did Taylor really tell us to use this pattern with each application? I do not think so. Most, if not all, coding patterns are optional. To use different patterns in our projects we have to select them according to the projects scale and the application.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-we-consider-the-repository-pattern&quot;&gt;Why should we consider the Repository pattern?&lt;/h3&gt;
+
+&lt;p&gt;Generally abstraction is a good practice and so is the Repository pattern if we are working on a large scale project. The reason to have it, is simple. One day there might be a need to swap out the &lt;a href=&quot;http://laravel.com/docs/4.2/eloquent&quot;&gt;Eloquent&lt;/a&gt; with another database driver. If our database layer is abstracted the swapping process can go with less pain.&lt;/p&gt;
+
+&lt;p&gt;But how likely will we need to swap out the Eloquent? Eloquent supports many database services, including &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; and &lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;. Perhaps we would need to swap out Eloquent if we want to use &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt; which works well with &lt;a href=&quot;http://en.wikipedia.org/wiki/Hierarchical_database_model&quot;&gt;hierarchical data&lt;/a&gt;. In most cases we can stick happily with Eloquent.&lt;/p&gt;
+
+&lt;h3 id=&quot;selective-abstraction-does-not-make-sense&quot;&gt;Selective abstraction does not make sense!&lt;/h3&gt;
+
+&lt;p&gt;I have seen too many times the following situation. Developer is using Repositories with &lt;a href=&quot;http://laravel.com/docs/4.2/ioc&quot;&gt;interface binding&lt;/a&gt;. He is also using some third party packages, like image manipulator, which are not abstracted in any way. Does this make any sense?&lt;/p&gt;
+
+&lt;p&gt;And when i ask this developer why is he using Repositories, i usually do not get a straight answer. Perhaps some gibberish about Repositories being a good practice or something. Also i have seen projects that use Repositories returning the Eloquent object.&lt;/p&gt;
+
+&lt;p&gt;If your Repository returns Eloquent object, your code is still tightly coupled to Eloquent driver and you have accomplished nothing!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is just stupid!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Perhaps it would make sense to abstract everything and prepare for everything. To use only Repositories is 100% senseless!&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 02 Nov 2014 02:00:00 +0200</pubDate>
+        <link>http://keevitaja.com/2014/11/selective-abstraction/</link>
+        <guid isPermaLink="true">http://keevitaja.com/2014/11/selective-abstraction/</guid>
+        
+        <category>Code</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

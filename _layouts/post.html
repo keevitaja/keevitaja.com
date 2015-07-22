@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article>
+    <div>
+        <header>
+            <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+
+            {% for tag in page.tags %}
+                <a href="{{ site.baseurl }}/history#{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+
+            <h1 class="title">
+                <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            </h1>
+        </header>
+
+        {{ page.content | split:'<!-- more -->' | last | markdownify }}
+
+        {% include disqus.html %}
+    </div>
+</article>

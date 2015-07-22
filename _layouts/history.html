@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article>
+    <div>
+        <h1 class="title">
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </h1>
+
+        {% for tag in site.tags %}
+            <h3><a id="{{ tag | first }}"></a>{{ tag | first }}</h3>
+
+            {% for posts in tag %}
+                {% for post in posts %}
+                    {% if post.title %}
+                        {{ post.date | date_to_string }}: <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</article>

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.2.0"
+  }
+}

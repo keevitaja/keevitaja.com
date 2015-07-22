@@ -1,0 +1,56 @@
+main {
+    margin-top: rhythm(1);
+
+    @include susy-media($breakpoint) {
+        margin-top: rhythm(3/2);
+    }
+
+    article {
+        background-color: $color-background-article;
+        border: 6px solid darken($color-background, 4%);
+        margin-bottom: rhythm(1);
+
+        @include susy-media($breakpoint) {
+            margin-bottom: rhythm(3/2);
+        }
+
+        .title {
+            @include adjust-font-size-to(30px);
+            line-height: 1.4;
+            margin-top: 0;
+            color: $color-title;
+
+            a {
+                color: $color-text;
+
+                &:hover {
+                    color: $color-main;
+                }
+            }
+        }
+
+        & > div {
+            border: 1px solid darken($color-background, 15%);
+            padding: rhythm(1/2);
+
+            @include susy-media($breakpoint) {
+                padding: rhythm(1);
+            }
+
+            & > header {
+                & > a, time {
+                    @include adjust-font-size-to(14px);
+                }
+
+                time {
+                    margin-right: rhythm(1/2);
+                    color: $color-title;
+                }
+            }
+
+            #disqus_thread {
+                margin-top: rhythm(2);
+            }
+        }
+    }
+}

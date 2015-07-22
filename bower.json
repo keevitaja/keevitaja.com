@@ -1,0 +1,6 @@
+{
+  "name": "keevitaja.com",
+  "dependencies": {
+    "highlight.js": "https://github.com/isagalaev/highlight.js.git#8.6"
+  }
+}

@@ -1,0 +1,11 @@
+baseurl: ""
+url: "http://keevitaja.com"
+
+markdown: kramdown
+destination: public
+permalink: /:year/:month/:title/
+
+exclude: [LICENSE, gulpfile.js, config.rb, bower_components, node_modules, package.json, bower.json, keevitaja.sublime-project]
+
+gems:
+  - jekyll-sitemap

@@ -1,0 +1,29 @@
+$base-font-size: 18px;
+$base-line-height: 30px;
+$base-font-family: 'Source Sans Pro', sans-serif;
+$code-font-family: 'Source Code Pro', monospace;
+$rhythm-unit: 'rem';
+
+@import 'normalize';
+@import 'susy';
+@import 'compass/utilities/general/clearfix';
+@import "compass/css3/user-interface";
+
+$susy: (
+    columns: 12,
+    gutters: 1/2
+);
+
+$breakpoint: 640px;
+
+$color-main: #d6321d;
+$color-background: #f9f9f9;
+$color-background-article: #fff;
+$color-text: #424242;
+$color-title: lighten($color-text, 10%);
+
+@import '_common';
+@import '_railscasts';
+@import 'header';
+@import 'main';
+@import 'footer';

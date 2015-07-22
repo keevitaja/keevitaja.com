@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://keevitaja.com/2014/11/http-responses-laravel-command-pattern/</loc>
+    <lastmod>2014-11-04T02:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://keevitaja.com/2014/11/auto-initialize-constructor-parameters/</loc>
+    <lastmod>2014-11-03T02:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://keevitaja.com/2014/11/selective-abstraction/</loc>
+    <lastmod>2014-11-02T02:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://keevitaja.com/history.html</loc>
+  </url>
+  <url>
+    <loc>http://keevitaja.com/</loc>
+  </url>
+</urlset>
