@@ -38,11 +38,11 @@ main {
             }
 
             & > header {
-                & > a, time {
+                & > a, span {
                     @include adjust-font-size-to(14px);
                 }
 
-                time {
+                span {
                     margin-right: rhythm(1/2);
                     color: $color-title;
                 }

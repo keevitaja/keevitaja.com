@@ -4,7 +4,7 @@ layout: default
 <article>
     <div>
         <header>
-            <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+            <span>{{ page.date | date: "%b %-d, %Y" }}</span>
 
             {% for tag in page.tags %}
                 <a href="{{ site.baseurl }}/history#{{ tag }}">{{ tag }}</a>
