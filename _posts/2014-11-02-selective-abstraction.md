@@ -14,7 +14,7 @@ In Laravel community lot of people use Repository pattern by Taylor Otwell and a
 <blockquote>
     Edited on july 2015 <br><br>
     50% of this is total crap. I will rewrite this post as soon as possible.
-</blockquote>>
+</blockquote>
 
 In Laravel community lot of people use [Repository pattern](http://ryantablada.com/post/the-repository-pattern-in-action) by [Taylor Otwell](http://taylorotwell.com/). At the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!
 
