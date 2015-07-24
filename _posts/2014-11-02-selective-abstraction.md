@@ -12,7 +12,7 @@ In Laravel community lot of people use Repository pattern by Taylor Otwell and a
 <!-- more -->
 
 <blockquote>
-    Edited on july 2015 <br><br>
+    test Edited on july 2015 <br><br>
     50% of this is total crap. I will rewrite this post as soon as possible.
 </blockquote>
 
