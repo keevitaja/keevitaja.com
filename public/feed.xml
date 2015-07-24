@@ -5,8 +5,8 @@
     <description></description>
     <link>http://keevitaja.com/</link>
     <atom:link href="http://keevitaja.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jul 2015 09:18:24 +0300</pubDate>
-    <lastBuildDate>Thu, 23 Jul 2015 09:18:24 +0300</lastBuildDate>
+    <pubDate>Sat, 25 Jul 2015 01:25:37 +0300</pubDate>
+    <lastBuildDate>Sat, 25 Jul 2015 01:25:37 +0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -156,6 +156,14 @@ public function __construct($property)
         <description>&lt;p&gt;In Laravel community lot of people use Repository pattern by Taylor Otwell and at the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!&lt;/p&gt;
 
 &lt;!-- more --&gt;
+
+&lt;blockquote&gt;
+    Edited on july 2015 &lt;br /&gt;&lt;br /&gt;
+    50% of this is total crap. I will rewrite this post as soon as possible.
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+
+&lt;/blockquote&gt;
 
 &lt;p&gt;In Laravel community lot of people use &lt;a href=&quot;http://ryantablada.com/post/the-repository-pattern-in-action&quot;&gt;Repository pattern&lt;/a&gt; by &lt;a href=&quot;http://taylorotwell.com/&quot;&gt;Taylor Otwell&lt;/a&gt;. At the same time they have no problem with using third party packages tightly coupled to their codebase. This kind of selective abstraction makes no sense!&lt;/p&gt;
 
