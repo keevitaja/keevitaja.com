@@ -4,6 +4,8 @@ var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
+var runSequence = require('run-sequence');
+var exec = require('child_process').exec;
 
 gulp.task('css', function() {
     gulp.src('./_sass/**/*.scss')
@@ -22,7 +24,8 @@ gulp.task('js', function() {
     gulp.src('./_js/**/*.js')
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./js'))
+        .pipe(notify('Compiled js files'));
 });
 
 gulp.task('copy', function() {
@@ -32,12 +35,10 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('./js'));
 });
 
-gulp.task('jekyll', function (gulpCallBack){
-    var spawn = require('child_process').spawn;
-    var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
-
-    jekyll.on('exit', function(code) {
-        gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+gulp.task('jekyll', function(cb) {
+    exec('jekyll build', function(err) {
+        if (err) return cb(err);
+        cb(); 
     });
 
     gulp.src('').pipe(notify('Compiled html files'));
@@ -55,4 +56,11 @@ gulp.task('watch', function() {
     ], ['jekyll']);
 });
 
-gulp.task('default', ['copy', 'css', 'js', 'jekyll', 'watch']);
+gulp.task('default', function(callback) {
+    runSequence(
+        ['copy', 'css', 'js'],
+        'jekyll', 
+        'watch',
+        callback
+    );
+});

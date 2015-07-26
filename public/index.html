@@ -56,6 +56,97 @@
     <article>
         <div>
             <header>
+                <span>Jul 26, 2015</span>
+
+                
+                    <a href="/history#Code">Code</a>
+                
+
+                <h1 class="title">
+                    <a href="/2015/07/multilingual-laravel-applications-right-way/">Multilingual Laravel applications The Right Way</a>
+                </h1>
+            </header>
+
+            <p>The largest problem with multilingual applications in “pretty URL” architecture is routing.</p>
+
+<pre><code>http://site.com/about
+http://site.com/fr/about
+</code></pre>
+
+<p>Both these URLs point to the same controller. The problems worsens when you need to play with URI segments.</p>
+
+<pre><code>Input::segment(1);
+</code></pre>
+
+<p>With the URLs above Input returns different results. And that can be a huge problem.</p>
+
+<h3 id="adressing-the-problem">Adressing the problem</h3>
+
+<p>Without Google you could store the locale information inside a session variable. As Google hates duplicate content, this is not an option.</p>
+
+<p>Another approach would be to reroute everything. While the approach works, it is lot of work and tends to get messy.</p>
+
+<p>To do it <strong>The Right Way</strong> is to remove the locale slug from the REQUEST_URI in public/index.php file:</p>
+
+<pre><code>$pattern = '/^\/(en|fr)\//';
+$uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_URL);
+
+if (preg_match($pattern, $uri, $matches)) {
+    $uri = preg_replace($pattern, '/', $uri);
+
+    $_SERVER['REQUEST_URI'] = $uri;
+
+    define('LOCALE', $matches[1]);
+}
+</code></pre>
+
+<p>Now the framework sees only the unlocalized URI and locale information is stored inside the LOCALE constant. With the code above you have created the cleanest possible multilingual environment.</p>
+
+<p>I do not want to troll here anyone, but the code above does like 90% most localization packages do.</p>
+
+<h3 id="linguist-package">Linguist package</h3>
+
+<p><a href="https://github.com/keevitaja/linguist">https://github.com/keevitaja/linguist</a></p>
+
+<p>This package removes the locale slug and helps with the URL and anchor generation. Few examples in artisan tinker:</p>
+
+<pre><code>&gt;&gt;&gt; Linguist::workingLocale();
+=&gt; "en"
+
+&gt;&gt;&gt; Linguist::url('some/path');
+=&gt; "http://localhost/en/some/path"
+
+&gt;&gt;&gt; Linguist::url('some/path', [], true, 'fr');
+=&gt; "https://localhost/fr/some/path"
+
+&gt;&gt;&gt; Linguist::route('test.show', [3]);
+=&gt; "http://localhost/en/test/3"
+
+&gt;&gt;&gt; LinguistHtml::linkToRoute('test.show', 'Show third test', [3]);
+=&gt; "<a href="http://localhost/en/test/3">Show third test</a>"
+
+&gt;&gt;&gt; lnk_to('/', 'Home');
+=&gt; "<a href="http://localhost/en">Home</a>"
+
+&gt;&gt;&gt; Config::set('linguist.hide_default', true);
+&gt;&gt;&gt; lnk_to('/', 'Home');
+=&gt; "<a href="http://localhost">Home</a>"
+
+&gt;&gt;&gt; lnk_to_route('test.show', 'Show third test', [3], ['class' =&gt; 'button', 'data-delete']);
+=&gt; "<a class="button" data-delete="" href="http://localhost/en/test/3">Show third test</a>"
+</code></pre>
+
+<p>Am i smart or what?</p>
+
+
+
+            <a href="/2015/07/multilingual-laravel-applications-right-way/">Continue reading ...</a>
+        </div>
+    </article>
+
+    <article>
+        <div>
+            <header>
                 <span>Nov 4, 2014</span>
 
                 

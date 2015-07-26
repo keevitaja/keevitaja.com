@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>History of Posts</title>
-        <meta name="description" content="These are the posts of this blog">
+        <title>Multilingual Laravel applications The Right Way</title>
+        <meta name="description" content="Linguist is a composer package that provides an easy localization support for the Laravel framework.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -54,47 +54,104 @@
             <div class="container">
                 <article>
     <div>
-        <h1 class="title">
-            <a href="/history/">History of Posts</a>
-        </h1>
-
-        
-            <h3><a id="Code"></a>Code</h3>
+        <header>
+            <span>Jul 26, 2015</span>
 
             
-                
-                    
-                
+                <a href="/history#Code">Code</a>
             
-                
-                    
-                        26 Jul 2015: <a href="/2015/07/multilingual-laravel-applications-right-way/">Multilingual Laravel applications The Right Way</a><br>
-                    
-                
-                    
-                        04 Nov 2014: <a href="/2014/11/http-responses-laravel-command-pattern/">How to handle HTTP responses in Laravel using Command Pattern</a><br>
-                    
-                
-                    
-                        02 Nov 2014: <a href="/2014/11/selective-abstraction/">Selective abstraction does not make sense</a><br>
-                    
-                
-            
-        
-            <h3><a id="Tech"></a>Tech</h3>
 
-            
-                
-                    
-                
-            
-                
-                    
-                        03 Nov 2014: <a href="/2014/11/auto-initialize-constructor-parameters/">How to auto-initialize constructor parameters in Sublime Text 3</a><br>
-                    
-                
-            
-        
+            <h1 class="title">
+                <a href="/2015/07/multilingual-laravel-applications-right-way/">Multilingual Laravel applications The Right Way</a>
+            </h1>
+        </header>
+
+        <p>The largest problem with multilingual applications in “pretty URL” architecture is routing.</p>
+
+<pre><code>http://site.com/about
+http://site.com/fr/about
+</code></pre>
+
+<p>Both these URLs point to the same controller. The problems worsens when you need to play with URI segments.</p>
+
+<pre><code>Input::segment(1);
+</code></pre>
+
+<p>With the URLs above Input returns different results. And that can be a huge problem.</p>
+
+<h3 id="adressing-the-problem">Adressing the problem</h3>
+
+<p>Without Google you could store the locale information inside a session variable. As Google hates duplicate content, this is not an option.</p>
+
+<p>Another approach would be to reroute everything. While the approach works, it is lot of work and tends to get messy.</p>
+
+<p>To do it <strong>The Right Way</strong> is to remove the locale slug from the REQUEST_URI in public/index.php file:</p>
+
+<pre><code>$pattern = '/^\/(en|fr)\//';
+$uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_URL);
+
+if (preg_match($pattern, $uri, $matches)) {
+    $uri = preg_replace($pattern, '/', $uri);
+
+    $_SERVER['REQUEST_URI'] = $uri;
+
+    define('LOCALE', $matches[1]);
+}
+</code></pre>
+
+<p>Now the framework sees only the unlocalized URI and locale information is stored inside the LOCALE constant. With the code above you have created the cleanest possible multilingual environment.</p>
+
+<p>I do not want to troll here anyone, but the code above does like 90% most localization packages do.</p>
+
+<h3 id="linguist-package">Linguist package</h3>
+
+<p><a href="https://github.com/keevitaja/linguist">https://github.com/keevitaja/linguist</a></p>
+
+<p>This package removes the locale slug and helps with the URL and anchor generation. Few examples in artisan tinker:</p>
+
+<pre><code>&gt;&gt;&gt; Linguist::workingLocale();
+=&gt; "en"
+
+&gt;&gt;&gt; Linguist::url('some/path');
+=&gt; "http://localhost/en/some/path"
+
+&gt;&gt;&gt; Linguist::url('some/path', [], true, 'fr');
+=&gt; "https://localhost/fr/some/path"
+
+&gt;&gt;&gt; Linguist::route('test.show', [3]);
+=&gt; "http://localhost/en/test/3"
+
+&gt;&gt;&gt; LinguistHtml::linkToRoute('test.show', 'Show third test', [3]);
+=&gt; "<a href="http://localhost/en/test/3">Show third test</a>"
+
+&gt;&gt;&gt; lnk_to('/', 'Home');
+=&gt; "<a href="http://localhost/en">Home</a>"
+
+&gt;&gt;&gt; Config::set('linguist.hide_default', true);
+&gt;&gt;&gt; lnk_to('/', 'Home');
+=&gt; "<a href="http://localhost">Home</a>"
+
+&gt;&gt;&gt; lnk_to_route('test.show', 'Show third test', [3], ['class' =&gt; 'button', 'data-delete']);
+=&gt; "<a class="button" data-delete="" href="http://localhost/en/test/3">Show third test</a>"
+</code></pre>
+
+<p>Am i smart or what?</p>
+
+
+
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'keevitaja'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 </article>
             </div>
