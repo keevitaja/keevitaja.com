@@ -67,17 +67,17 @@ This package removes the locale slug and helps with the URL and anchor generatio
 => "http://localhost/en/test/3"
 
 >>> LinguistHtml::linkToRoute('test.show', 'Show third test', [3]);
-=> "<a href="http://localhost/en/test/3">Show third test</a>"
+=> "&lt;a href="http://localhost/en/test/3"&gt;Show third test&lt;/a&gt;"
 
 >>> lnk_to('/', 'Home');
-=> "<a href="http://localhost/en">Home</a>"
+=> "&lt;a href="http://localhost/en">Home&lt;/a&gt;"
 
 >>> Config::set('linguist.hide_default', true);
 >>> lnk_to('/', 'Home');
-=> "<a href="http://localhost">Home</a>"
+=> "&lt;a href="http://localhost">Home&lt;/a&gt;"
 
 >>> lnk_to_route('test.show', 'Show third test', [3], ['class' => 'button', 'data-delete']);
-=> "<a class="button" data-delete href="http://localhost/en/test/3">Show third test</a>"
+=> "&lt;a class="button" data-delete href="http://localhost/en/test/3">Show third test&lt;/a&gt;"
 </code></pre>
 
 Am i smart or what?

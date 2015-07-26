@@ -123,17 +123,17 @@ if (preg_match($pattern, $uri, $matches)) {
 =&gt; "http://localhost/en/test/3"
 
 &gt;&gt;&gt; LinguistHtml::linkToRoute('test.show', 'Show third test', [3]);
-=&gt; "<a href="http://localhost/en/test/3">Show third test</a>"
+=&gt; "&lt;a href="http://localhost/en/test/3"&gt;Show third test&lt;/a&gt;"
 
 &gt;&gt;&gt; lnk_to('/', 'Home');
-=&gt; "<a href="http://localhost/en">Home</a>"
+=&gt; "&lt;a href="http://localhost/en"&gt;Home&lt;/a&gt;"
 
 &gt;&gt;&gt; Config::set('linguist.hide_default', true);
 &gt;&gt;&gt; lnk_to('/', 'Home');
-=&gt; "<a href="http://localhost">Home</a>"
+=&gt; "&lt;a href="http://localhost"&gt;Home&lt;/a&gt;"
 
 &gt;&gt;&gt; lnk_to_route('test.show', 'Show third test', [3], ['class' =&gt; 'button', 'data-delete']);
-=&gt; "<a class="button" data-delete="" href="http://localhost/en/test/3">Show third test</a>"
+=&gt; "&lt;a class="button" data-delete href="http://localhost/en/test/3"&gt;Show third test&lt;/a&gt;"
 </code></pre>
 
 <p>Am i smart or what?</p>
