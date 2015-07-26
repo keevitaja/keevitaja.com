@@ -7,6 +7,10 @@ date:   2015-07-26 00:00:00
 tags: Code
 ---
 
+The largest problem with multilingual applications in "pretty URL" architecture is routing. By removing the locale slug from the REQUEST_URI we have created the cleanest possible multilingual environment possible.
+
+<!-- more -->
+
 The largest problem with multilingual applications in "pretty URL" architecture is routing.  
 
 <pre><code>http://site.com/about
