@@ -1,5 +1,10 @@
-.sass-cache
-bower_components
-node_modules
-keevitaja.sublime-workspace
-keevitaja.sublime-project
+.env
+.coverage
+composer.lock
+/bin
+/core
+/build
+/vendor
+/coverage
+/node_modules
+/bower_components
