@@ -78,7 +78,8 @@
         "anomaly/sitemap-extension": "~2.1.0",
         "pyrocms/starter-theme": "~1.0.0",
         "pyrocms/accelerant-theme": "~1.0.0",
-        "keevitaja/blog-theme": "dev-master"
+        "keevitaja/blog-theme": "dev-master",
+        "pixney/hjortron-theme": "^1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
